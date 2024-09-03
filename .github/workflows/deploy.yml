@@ -95,7 +95,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
       - name: Download release artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: release
           path: target
@@ -140,7 +140,7 @@ jobs:
       - name: Delete existing site files
         run: rm -r *
       - name: Download site artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: site
       - name: Unpack the artifact
